@@ -50,7 +50,7 @@
     "contactPoint": [{
       "@type": "ContactPoint",
       "contactType": "inquiries",
-      "email": "hello@your-domain.com"
+      "email": "mark.jacobs@dtb-ventures.com"
     }]
   }
   </script>
@@ -231,8 +231,12 @@
       <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Let’s Talk</h2>
       <p class="mt-3 text-ink-700">Looking to discuss a property, strategy, or partnership? Send a note and we’ll reply within one business day.</p>
       <div class="mt-8 rounded-3xl bg-white border border-ink-100 p-6 shadow-soft text-left">
-        <form name="contact" netlify>
-          <div class="grid md:grid-cols-2 gap-4">
+        <form action="https://formsubmit.co/mark.jacobs@dtb-ventures.com" method="POST">
+          <input type="hidden" name="_subject" value="New inquiry from DTB Ventures website" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="/?sent=1#contact" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="grid md:grid-cols-2 gap-4">
             <div>
               <label class="text-sm text-ink-600">Name</label>
               <input type="text" name="name" class="mt-1 w-full rounded-xl border border-ink-200 px-3 py-2" required />
@@ -248,7 +252,7 @@
           </div>
           <div class="mt-5 flex items-center justify-end">
             
-            <button class="inline-flex items-center rounded-2xl bg-brand-600 text-white px-5 py-2.5 hover:bg-brand-700">Send</button>
+            <button type="submit" class="inline-flex items-center rounded-2xl bg-brand-600 text-white px-5 py-2.5 hover:bg-brand-700">Send</button>
           </div>
         </form>
       </div>
